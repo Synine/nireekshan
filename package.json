@@ -1,0 +1,33 @@
+{
+  "name": "nireekshan",
+  "type": "module",
+  "source": "src/index.ts",
+  "exports": {
+    "require": "./dist/nireekshan.cjs",
+    "default": "./dist/nireekshan.mjs"
+  },
+  "main": "dist/nireekshan.cjs",
+  "module": "dist/nireekshan.mjs",
+  "umd:main": "dist/nireekshan.umd.js",
+  "scripts": {
+    "test": "vitest",
+    "test:ci": "vitest --run",
+    "lint": "eslint",
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "documentation": "^14.0.3",
+    "eslint": "^8.57.1",
+    "globals": "^15.14.0",
+    "microbundle": "^0.15.1",
+    "standard": "^17.1.2",
+    "typescript-eslint": "^8.19.0",
+    "vitest": "^2.1.8"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

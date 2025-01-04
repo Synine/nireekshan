@@ -1,0 +1,26 @@
+repos:
+  # - repo: https://github.com/standard/ts-standard
+  #   rev: master
+  #   hooks:
+  #     - id: standard
+  #       files: \.(js|jsx|ts|tsx)$
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.1.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  - repo: local
+    hooks:
+      - id: eslint
+        name: eslint
+        entry: npx eslint
+        files: \.(js|jsx|ts|tsx)$
+        language: system
+      - id: run-tests
+        name: Run tests
+        entry: npm run test:ci
+        files: \.(js|jsx|ts|tsx)$
+        language: system

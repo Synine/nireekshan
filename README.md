@@ -1,6 +1,6 @@
 # `nireekshan`
 
-A tiny and fast dependency injector for the browser and Node.js, written in TypeScript.
+A tiny and fast event emitter for the browser and Node.js, written in TypeScript.
 
 ## Installation
 

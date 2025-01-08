@@ -1,6 +1,6 @@
 {
   "name": "nireekshan",
-  "version": "0.1.0-pre",
+  "version": "0.1.1-pre",
   "type": "module",
   "source": "src/index.ts",
   "exports": {

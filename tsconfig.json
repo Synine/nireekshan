@@ -17,6 +17,10 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noPropertyAccessFromIndexSignature": true,
+    "noImplicitAny": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
     // More optimizations
     "removeComments": true
   },

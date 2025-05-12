@@ -8,7 +8,7 @@
     "module": "ES2015",
     // Bundler mode
     "moduleResolution": "node",
-    "noEmit": true,
+    "declaration": true,
     // Best practices
     "strict": true,
     "skipLibCheck": true,

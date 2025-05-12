@@ -1,0 +1,8 @@
+
+.status-connected {
+  color: greenyellow;
+}
+
+.status-disconnected {
+  color: violet;
+}

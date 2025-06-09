@@ -10,6 +10,7 @@ type VariadicArgs = any[];
 type EventCallback = (...args: VariadicArgs) => any
 
 const CALLBACK_ERROR_MESSAGE = '[emitter]: callback must be a function';
+const CALLBACK_EMIT_ERROR = `[emitter]: error emitting callback function`;
 
 /**
  * A minimal event emitter
@@ -94,7 +95,14 @@ export class Emitter {
     const callbacksMaybe: EventCallback[] | undefined = this.eventMap.get(event);
     if (callbacksMaybe) {
       for (const callback of callbacksMaybe) {
-        callback(...args);
+        // don't let callback error take down the emitter
+        try {
+          callback(...args);
+        } catch (e: Error | any) {
+          if (!!e) {
+            console.error(CALLBACK_EMIT_ERROR, e)
+          }
+        }
       }
     }
   }
